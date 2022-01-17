@@ -7,7 +7,8 @@ political_decisions = {
 		picture = "xsu_ambition"
 		potential = {
 			NOT = { has_country_flag = hide_superstate }
-			OR = { XMS = { exists = yes } XAC = { exists = yes } XSU = { exists = yes } }
+			OR = {tag = XMS tag = XAC }
+			#OR = { XMS = { exists = yes }  XAC = { exists = yes } # XSU = { exists = yes } }
 			has_country_flag = trade_block_ambition 
 			
 			capital_scope = { continent = south_america }

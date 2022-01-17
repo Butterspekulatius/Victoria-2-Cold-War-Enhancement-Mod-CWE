@@ -7,7 +7,7 @@ political_decisions = {
 		picture = "xau_ambition"
 		potential = {
 			NOT = { has_country_flag = hide_superstate }
-			OR = { exists = XAU exists = XEC exists = XEW exists = XSA exists = XEF exists = AOF exists = AEF } capital_scope = { continent = africa }
+			OR = { tag = XAU tag = XEC tag = XEW tag = XSA tag = XEF tag = AOF tag = AEF } capital_scope = { continent = africa }
 			NOT = { has_country_flag = xau_ambition } 
 		}
 		allow = {

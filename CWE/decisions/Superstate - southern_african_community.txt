@@ -7,7 +7,7 @@ political_decisions = {
 		picture = "xsa_ambition"
 		potential = {
 			NOT = { has_country_flag = hide_superstate }
-			NOT = { OR = { exists = XEW exists = XEC exists = XEF exists = XAU } } 
+			#NOT = { OR = { exists = XEW exists = XEC exists = XEF exists = XAU } } 
 			OR = { tag = RSA tag = NAM tag = BOT tag = CNG tag = LES tag = MLW  tag = MOZ  tag = SWA tag = TAN tag = ZIM tag = ZAM tag = MRT tag = MAD tag = SEY }
 			NOT = { has_country_flag = xsa_ambition has_country_flag = xau_ambition } 
 			NOT = { has_country_flag = imp_ambition }
@@ -68,7 +68,7 @@ political_decisions = {
 				}
 				NOT = { OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 } }
 				has_country_modifier = in_bankrupcy
-				exists = XEW exists = XSA exists = XEF exists = XAU
+				#exists = XEW exists = XSA exists = XEF exists = XAU
 			}
 			war = no
 		}
@@ -101,7 +101,8 @@ political_decisions = {
 		potential = {
 			NOT = { has_country_flag = hide_superstate }
 			NOT = { capital_scope = { has_province_modifier = single_market } }
-			NOT = { OR = { exists = XEW exists = XEC exists = XEF exists = XAU } } OR = { tag = RSA tag = NAM tag = BOT tag = CNG tag = LES tag = MLW  tag = MOZ  tag = SWA tag = TAN tag = ZIM tag = ZAM tag = MRT tag = MAD tag = SEY }
+			#NOT = { OR = { exists = XEW exists = XEC exists = XEF exists = XAU } } 
+			OR = { tag = RSA tag = NAM tag = BOT tag = CNG tag = LES tag = MLW  tag = MOZ  tag = SWA tag = TAN tag = ZIM tag = ZAM tag = MRT tag = MAD tag = SEY }
 		}
 		allow = {
 			has_country_flag = xsa_ambition
@@ -121,7 +122,7 @@ political_decisions = {
 		potential = {
 			NOT = { has_country_flag = hide_superstate }
 			NOT = { capital_scope = { has_province_modifier = currency_union_province } }
-			NOT = { OR = { exists = XEW exists = XEC exists = XEF exists = XAU } }
+			#NOT = { OR = { exists = XEW exists = XEC exists = XEF exists = XAU } }
 			OR = { tag = RSA tag = NAM tag = BOT tag = CNG tag = LES tag = MLW  tag = MOZ  tag = SWA tag = TAN tag = ZIM tag = ZAM tag = MRT tag = MAD tag = SEY }
 		}
 		allow = {
@@ -144,7 +145,7 @@ political_decisions = {
 		potential = {
 			NOT = { has_country_flag = hide_superstate }
 			NOT = { capital_scope = { is_core = XSA } }
-			NOT = { OR = { exists = XEW exists = XEC exists = XEF exists = XAU } }
+			#NOT = { OR = { exists = XEW exists = XEC exists = XEF exists = XAU } }
 			OR = { tag = RSA tag = NAM tag = BOT tag = CNG tag = LES tag = MLW  tag = MOZ  tag = SWA tag = TAN tag = ZIM tag = ZAM tag = MRT tag = MAD tag = SEY }
 		}
 		allow = {
@@ -167,7 +168,7 @@ political_decisions = {
 		potential = {
 			NOT = { has_country_flag = hide_superstate }
 			NOT = { capital_scope = { has_province_modifier = defence_union } }
-			NOT = { OR = { exists = XEW exists = XEC exists = XEF exists = XAU } }
+			#NOT = { OR = { exists = XEW exists = XEC exists = XEF exists = XAU } }
 			OR = { tag = RSA tag = NAM tag = BOT tag = CNG tag = LES tag = MLW  tag = MOZ  tag = SWA tag = TAN tag = ZIM tag = ZAM tag = MRT tag = MAD tag = SEY }
 		}
 		allow = {
@@ -194,7 +195,7 @@ political_decisions = {
 		potential = {
 			NOT = { has_country_flag = hide_superstate }
 			XSA = { exists = no }
-			NOT = { OR = { exists = XEW exists = XEC exists = XEF exists = XAU } }
+			#NOT = { OR = { exists = XEW exists = XEC exists = XEF exists = XAU } }
 			OR = { tag = RSA tag = NAM tag = BOT tag = CNG tag = LES tag = MLW  tag = MOZ  tag = SWA tag = TAN tag = ZIM tag = ZAM tag = MRT tag = MAD tag = SEY }
 		}
 		allow = {
