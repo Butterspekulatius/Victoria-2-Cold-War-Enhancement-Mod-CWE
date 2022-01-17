@@ -7,7 +7,7 @@ political_decisions = {
 		picture = "xau_ambition"
 		potential = {
 			NOT = { has_country_flag = hide_superstate }
-			OR = { tag = XAU tag = XEC tag = XEW tag = XSA tag = XEF tag = AOF tag = AEF } capital_scope = { continent = africa }
+			OR = { tag = XAU tag = XEC tag = XEW tag = XSA tag = XEF tag = AOF tag = AEF } capital_scope = { continent = africa } exists = XAU
 			NOT = { has_country_flag = xau_ambition } 
 		}
 		allow = {
@@ -19,6 +19,7 @@ political_decisions = {
 					OR = {
 						has_country_flag = xau_ambition
 						NOT = { has_country_flag = deny_superstate }
+						tag = XAU
 					}
 				}
 			}
@@ -231,5 +232,293 @@ political_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-	}		
+	}
+	
+	tag = STP tag = AEF 
+	
+	create_central_africa = {
+		picture = "xec_ambition"
+		potential = {
+			NOT = { has_country_flag = hide_superstate }
+			tag = XAU
+			NOT = {
+			    exists = XEC
+				
+			}
+			OR = {
+				is_sphere_leader_of = CMR
+				is_sphere_leader_of = CAR
+				is_sphere_leader_of = CHA
+				is_sphere_leader_of = ROC
+				is_sphere_leader_of = EQS
+				is_sphere_leader_of = GAB
+				is_sphere_leader_of = CNG
+				is_sphere_leader_of = ANG
+				is_sphere_leader_of = RWA
+				is_sphere_leader_of = BRN
+				is_sphere_leader_of = STP
+				is_sphere_leader_of = AEF
+			}	
+		}
+		allow = {
+			war = no
+			is_greater_power = yes
+			CMR = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+							war = no
+						}
+					}
+				}
+			}
+			CAR = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+							war = no
+						}
+					}
+				}
+			}
+			CHA = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+							war = no
+						}
+					}
+				}
+			}
+			ROC = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+							war = no
+						}
+					}
+				}
+			}
+			EQS = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+							war = no
+						}
+					}
+				}
+			}
+			GAB = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+							war = no
+						}
+					}
+				}
+			}
+			CNG = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+							war = no
+						}
+					}
+				}
+			}
+			ANG = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+							war = no
+						}
+					}
+				}
+			}
+			RWA = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+							war = no
+						}
+					}
+				}
+			}
+			BRN = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+							war = no
+						}
+					}
+				}
+			}
+			STP = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+							war = no
+						}
+					}
+				}
+			}
+			AEF = {
+				all_core = {
+					OR = {
+						owned_by = THIS
+						owner = {
+							in_sphere = THIS
+							war = no
+						}
+					}
+				}
+			}
+			
+		}
+		effect = {
+			
+			CMR = { all_core = { add_core = XEC } }
+			CAR = { all_core = { add_core = XEC } }
+			CHA = { all_core = { add_core = XEC } }
+			ROC = { all_core = { add_core = XEC } }
+			EQS = { all_core = { add_core = XEC } }
+			GAB = { all_core = { add_core = XEC } }
+			CNG = { all_core = { add_core = XEC } }
+			ANG = { all_core = { add_core = XEC } }
+			RWA = { all_core = { add_core = XEC } }
+			BRN = { all_core = { add_core = XEC } }
+			STP = { all_core = { add_core = XEC } }
+			AEF = { all_core = { add_core = XEC } }
+			any_country = {
+				limit = {
+					OR = {
+						tag = CMR
+						tag = CAR
+						tag = CHA
+						tag = ROC
+						tag = EQS
+						tag = GAB
+						tag = CNG
+						tag = ANG
+						tag = RWA
+						tag = BRN
+						tag = STP
+						tag = AEF
+					}
+					ai = yes
+					in_sphere = THIS
+				}
+				annex_to = THIS
+			}
+			any_country = {
+				limit = {
+					NOT = { is_culture_group = african is_culture_group = african_diaspora_cultures }
+					in_sphere = THIS
+					war = no
+					any_owned_province = {
+						OR = {
+							is_core = CMR
+							is_core = CAR
+							is_core = CHA
+							is_core = ROC
+							is_core = EQS
+							is_core = GAB
+							is_core = CNG
+							is_core = ANG
+							is_core = RWA
+							is_core = BRN	
+							is_core = STP	
+							is_core = AEF	
+						}
+					}
+				}
+				any_owned = {
+					limit = {
+						OR = {
+							is_core = CMR
+							is_core = CAR
+							is_core = CHA
+							is_core = ROC
+							is_core = EQS
+							is_core = GAB
+							is_core = CNG
+							is_core = ANG
+							is_core = RWA
+							is_core = BRN
+							is_core = STP	
+							is_core = AEF
+						}
+					}
+					secede_province = THIS
+				}
+			}
+			any_owned = {
+				limit = {
+					is_core = THIS
+					is_core = XEC
+					OR = {
+						is_core = CMR
+						is_core = CAR
+						is_core = CHA
+						is_core = ROC
+						is_core = EQS
+						is_core = GAB
+						is_core = CNG
+						is_core = ANG
+						is_core = RWA
+						is_core = BRN
+						is_core = STP	
+						is_core = AEF
+					}
+				}
+				remove_core = THIS
+			}
+			any_owned = {
+				limit = {
+					is_core = THIS
+					is_core = XEC
+				}
+				remove_core = XEC
+			}
+			any_owned = { 
+			limit = { is_core = XEC }
+				secede_province = XEC 
+				}
+			create_vassal = XEC
+			create_alliance = XEC
+			diplomatic_influence = {
+				who = XEC
+				value = 300
+			}
+			XEC = { prestige = -400 }
+			
+		}
+		ai_will_do = {
+		}
+	}
 }
+	
+}
+	
